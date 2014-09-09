@@ -1,0 +1,10 @@
+[
+ [(task ?id ?type ?state ?repo ?commit)
+  [?id :task/type ?type]
+  [?id :task/state ?sid]
+  [?sid :db/ident ?state]
+  [?id :task/repo ?repo]
+  [?id :task/commit ?commit]]
+ [(commit ?id ?ref)
+  [?id :commit/ref ?ref]]
+ ]

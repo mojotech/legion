@@ -1,0 +1,17 @@
+{:bunsen {:alerts [:slack]
+          :git-dir "../Bunsen/.git"
+          :commands [{:name "build"
+                      :description "build the things, please"
+                      :options [{:name "--thing"
+                                 :type "boolean"
+                                 :description "do the thing, or whatever"}]
+                      :arguments [{:name "image"
+                                   :description "an image"
+                                   :optional true}
+                                  {:name "thing"
+                                   :description "a thing"}
+                                  {:name "more"
+                                   :description "even more thing"
+                                   :multiple true}]}]
+          :branches {:default [:build :test]
+                     :staging [:build :test :deploy]}}}
