@@ -1,6 +1,7 @@
 (ns legion.resources
   (:require [legion.git :as git]
             [legion.datomic :as datomic]
+            [clojure.pprint :as pprint :refer [pprint]]
             [clojure.data.json :as json]
             [clojure.walk :refer [keywordize-keys]]
             [datomic.api :as d :refer [db q]]
@@ -48,7 +49,7 @@
    :available-media-types #{"text/plain" "application/json"}
    :as-response (fn [d ctx]
                   (as-response (coerce d) ctx))
-   :handle-exception ./pprint})
+   :handle-exception pprint})
 
 (defresource default [_] resource-defaults
   :exists? (constantly false))
