@@ -1,6 +1,6 @@
-(ns legion.test.handler
+(ns legion.test.app
   (:require [clojure.test :refer :all]
-            [legion.handler :refer :all]
+            [legion.app :refer :all]
             [ring.mock.request :as mock]))
 
 (deftest test-app

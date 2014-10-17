@@ -1,0 +1,53 @@
+;;
+
+{:legion/add-task-schema
+ {:txes [[{:db/id #db/id[:db.part/db]
+           :db/ident :task/type
+           :db/valueType :db.type/string
+           :db/cardinality :db.cardinality/one
+           :db/doc "the name of the command to start a task"
+           :db.install/_attribute :db.part/db}
+
+          {:db/id #db/id[:db.part/db]
+           :db/ident :task/repo
+           :db/valueType :db.type/string
+           :db/cardinality :db.cardinality/one
+           :db/doc "the name of the git repo associated with a task"
+           :db.install/_attribute :db.part/db}
+
+          {:db/id #db/id[:db.part/db]
+           :db/ident :task/commit
+           :db/valueType :db.type/string
+           :db/cardinality :db.cardinality/one
+           :db/doc "the hash of the git commit associated with a task"
+           :db.install/_attribute :db.part/db}
+
+          {:db/id #db/id[:db.part/db]
+           :db/ident :task/state
+           :db/valueType :db.type/keyword
+           :db/cardinality :db.cardinality/one
+           :db/doc "a reference to the current run state of a task"
+           :db.install/_attribute :db.part/db}
+
+          {:db/id #db/id[:db.part/db]
+           :db/ident :task/params
+           :db/valueType :db.type/ref
+           :db/cardinality :db.cardinality/many
+           :db/doc "a reference to an entity holding a param key/val pair"
+           :db.install/_attribute :db.part/db}
+
+          {:db/id #db/id[:db.part/db]
+           :db/ident :task.params/key
+           :db/valueType :db.type/keyword
+           :db/cardinality :db.cardinality/one
+           :db/doc "a keyword key associated with a task param"
+           :db.install/_attribute :db.part/db}
+
+          {:db/id #db/id[:db.part/db]
+           :db/ident :task.params/val
+           :db/valueType :db.type/string
+           :db/cardinality :db.cardinality/one
+           :db/doc "a string value associated with a task param"
+           :db.install/_attribute :db.part/db}
+
+          ]]}}
