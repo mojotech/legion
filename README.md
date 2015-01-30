@@ -1,6 +1,4 @@
-# legion... for we are many
-
-We should put more documentation here.
+# Legion... for we are many
 
 ## Prerequisites
 
@@ -10,10 +8,9 @@ You will need [Leiningen][1] 1.7.0 or above installed.
 
 ## Running
 
-To start a web server for the application, run:
+Change server config in core.clj (for now)
 
-    lein ring server
+    lein repl
+    (-main "ls -la")
 
-## License
-
-Copyright © 2014 FIXME
+Copyright © 2015 MojoTech
