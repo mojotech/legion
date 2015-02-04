@@ -1,5 +1,7 @@
 # Legion... for we are many
 
+[![Circle CI](https://circleci.com/gh/mojotech/legion.svg?style=svg)](https://circleci.com/gh/mojotech/legion)
+
 ## Prerequisites
 
 You will need [Leiningen][1] 1.7.0 or above installed.
